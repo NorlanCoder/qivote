@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -117,4 +116,5 @@
     @apply bg-background text-foreground;
   }
 }
+
 
