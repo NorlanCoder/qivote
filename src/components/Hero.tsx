@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in-50 slide-in-from-bottom duration-700 delay-400">
             <Link
               href="/vote"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-[#918EF4] text-white font-semibold rounded-xl hover:bg-[#7c78e8] transition-all"
+              className="group inline-flex items-center justify-center px-8 py-4 hover:bg-[#918EF4] text-white font-semibold rounded-xl bg-[#7c78e8] transition-all"
             >
               Voter maintenant
               <ArrowRight
