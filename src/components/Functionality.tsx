@@ -39,7 +39,7 @@ const Functionality = () => {
               </li>
             </ul>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="/accueil" className="inline-flex items-center gap-2 rounded-md bg-[#A7A2F6] px-5 py-3 text-white shadow transition-all hover:bg-[#7c78e8]">
+              <Link href="/accueil" className="inline-flex items-center gap-2 rounded-md hover:bg-[#A7A2F6] px-5 py-3 text-white shadow transition-all bg-[#7c78e8]">
                 Voter maintenant
                 <ArrowRight
                   className="h-5 w-5 transition-transform duration-300 -rotate-45"
