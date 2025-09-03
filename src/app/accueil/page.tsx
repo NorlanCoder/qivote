@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Cta from "@/components/Cta";
-import Figure from "@/components/Figure";
+
 import Advantage from "@/components/Advantage";
 import HowItWorks from "@/components/HowItWorks";
 import Partners from "@/components/Partners";
@@ -14,7 +14,7 @@ export default function Home() {
       <Functionality />
       <HowItWorks />
       <Advantage />
-      <Figure />
+      
       <Cta />
     </div>
   );

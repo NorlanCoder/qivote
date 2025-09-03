@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function HowItWorks() {
   return (
-    <div className="py-5 lg:py-16  flex flex-col  items-center justify-center w-5/6 lg:w-2/3 mx-auto gap-6 ">
+    <div className="py-5 lg:py-16  flex flex-col  items-center justify-center max-w-6xl gap-6 mx-auto ">
       <div className="relative w-full">
         <Image className="absolute -z-10 " src="/images/courbe.svg" alt="courbe" fill />
         <div className="flex justify-between px-0 md:px-5 xl:px-16 ">

@@ -2,13 +2,13 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 export default function Advantage() {
   return (
-    <div className="w-full bg-[#F5F3FE]">
-        <div  className="py-5 lg:py-14  flex flex-wrap  items-center justify-center xl:justify-between w-4/5 lg:w-2/3 mx-auto gap-6 ">
-            <div>
-                <h1  className="font-bold text-2xl lg:text-3xl xl:text-4xl pb-3 lg:pb-4">Pourquoi choisir Qivote?</h1>
-                <div className=" max-w-2xs sm:max-w-md">
-                    <h1 className="text-sm lg:text-lg pb-2">Une plateforme pensée pour la simplicité, l'éfficacité ... et le succès de vos évènements</h1>
-                    <ul className="space-y-2 text-xs lg:text-sm">
+    <div className="w-full bg-[#F5F3FE] py-14">
+        <div  className="max-w-6xl mx-auto  items-center gap-12 flex flex-col lg:flex-row px-4 lg:px-8">
+            <div className=" ">
+                <h1  className="text-gray-900 text-3xl font-semibold sm:text-4xl ">Pourquoi choisir Qivote?</h1>
+                <div className=" max-w-xl mt-6 md:mt-0">
+                    <h1 className="text-sm lg:text-lg pb-3">Une plateforme pensée pour la simplicité, l'éfficacité ... et le succès de vos évènements</h1>
+                    <ul className="space-y-3 text-xs lg:text-sm">
                         <li className="flex items-center gap-2"><Check size={16} className="text-[#7976C7]" />Expérience utilisateur fluide</li>
                         <li className="flex items-center gap-2"><Check size={16} className="text-[#7976C7]" />Outils tout-en-un</li>
                         <li className="flex items-center gap-2"><Check size={16} className="text-[#7976C7]" />Flexibilité & personnalisation</li>
@@ -17,7 +17,7 @@ export default function Advantage() {
                     </ul>
                 </div>
             </div>
-            <Image className="rounded-lg" src="/images/img1.jpg" alt="ChiffreImg" width={400} height={300} />
+            <Image className="rounded-lg" src="/images/img1.jpg" alt="ChiffreImg" width={470} height={320} />
         </div>
     </div>
     
