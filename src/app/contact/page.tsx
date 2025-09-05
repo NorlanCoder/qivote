@@ -177,7 +177,7 @@ export default function ContactPage() {
       </div>
 
       {/* Section bas - Call to Action avec fond SVG */}
-   <div className="relative py-16 overflow-hidden z-0">
+   <div className="relative pt-16 overflow-hidden z-0">
 <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
         
         {/* Contenu centré avec fond blanc */}
@@ -199,7 +199,8 @@ export default function ContactPage() {
             </Button>
           </div>
         </div>
-      </div>
+   </div>
+
     </div>
   );
 }
