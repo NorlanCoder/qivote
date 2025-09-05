@@ -1,7 +1,3 @@
-// La partie "à disparu en mobile" (c'est-à-dire la grille de 4 panneaux à droite) peut disparaître en mobile à cause de la grille `grid-cols-2` sans adaptation responsive, ou à cause de la hauteur fixe (h-48) qui peut poser problème avec le contenu overflow, ou encore à cause de classes utilitaires qui ne s'adaptent pas bien sur mobile. 
-// De plus, la structure flex-row à l'intérieur de chaque panneau peut causer des problèmes d'affichage sur petits écrans.
-// Voici une version réécrite qui rend la grille responsive et s'assure que les panneaux restent visibles en mobile :
-
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckIcon } from "lucide-react";
