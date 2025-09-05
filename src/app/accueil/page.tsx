@@ -1,10 +1,15 @@
-import Hero from '@/components/Hero';
-import Footer from '@/components/Hero';
+
+import Hero from "@/components/Hero";
+import Partners from "@/components/Partners";
+import Functionality from "@/components/Functionality";
+
 
 export default function Home() {
   return (
-    <div>
-      <p>Contenu</p>
+    <div className="">
+      <Hero />
+      <Partners />
+      <Functionality />
     </div>
   );
 }
