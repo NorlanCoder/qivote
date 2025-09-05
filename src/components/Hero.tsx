@@ -54,7 +54,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="/publish"
+              href="/devenir-annonceur"
               className="group inline-flex items-center justify-center p-2 px-3 bg-white/10 backdrop-blur-md text-white font-light rounded-full transition-all"
             >
               Devenir annonceur

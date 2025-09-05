@@ -8,7 +8,7 @@ export default function HowItWorks() {
     <div className="py-8 lg:py-16  flex flex-col  items-center justify-center max-w-5xl gap-6 mx-auto px-4 lg:px-0 text-black ">
       <div className="text-center max-w-xl lg:max-w-2xl py-4 lg:py-8">
         <h1 className="text-4xl font-bold text-center pb-4">Comment ça marche ?</h1>
-        <h1 className="text-xl ">Notre plateforme de billeterie en ligne rend la gestion d'évènements simple, sécurisée et accessible à tous.</h1>
+        <h1 className="text-xl ">Notre plateforme de billeterie en ligne rend la gestion d&apos;évènements simple, sécurisée et accessible à tous.</h1>
       </div>
       <div className="relative w-full ">
         <Image className="hidden md:block absolute -z-10 top-0 md:-top-4 lg:-top-8 xl:-top-12" src={Courbe} alt="courbe"  height={1100} />
@@ -24,14 +24,14 @@ export default function HowItWorks() {
                 <Image className="pb-2" src={Icone2} alt="icone2" width={50} height={50} />
                 <div className="max-w-56 ">
                     <h1 className="font-bold text-lg  pb-1 ">Votez pour vos favoris (individuellement ou en masse).</h1>
-                    <p className="text-sm ">Notre scanner de billets dédié transforme votre téléphone en l'outil ultime pour des enregistrements rapides sans faille.</p>
+                    <p className="text-sm ">Notre scanner de billets dédié transforme votre téléphone en l&apos;outil ultime pour des enregistrements rapides sans faille.</p>
                 </div>
             </div>
             <div className="flex flex-col pt-1 md:pt-7 lg:pt-9 xl:pt-5">
                 <Image className="pb-2" src={Icone3} alt="icone3" width={50} height={50} />
                 <div className="max-w-56 ">
                     <h1 className="font-bold text-lg pb-1 ">Suivez les résultats en temps réel et partagez!</h1>
-                    <p className="text-sm ">Grâce à notre système de paiement fiable, vous et vos clients bénéficiez d'une expérience de paiement universelle.</p>
+                    <p className="text-sm ">Grâce à notre système de paiement fiable, vous et vos clients bénéficiez d&apos;une expérience de paiement universelle.</p>
                 </div>
             </div>
         </div>

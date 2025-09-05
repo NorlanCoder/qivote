@@ -26,14 +26,14 @@ export default function Figure() {
         <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-12 lg:gap-20 xl:gap-44">
           <div className="max-w-2xl pb-2">
             <div className={`flex  mb-6`}>
-              <div className="inline-flex items-center px-3 py-2 rounded-full bg-[rgba(255,255,255,0.1)] text-white text-sm font-medium">
+              <div className="inline-flex items-center px-3 py-2 rounded-full bg-[rgba(255,255,255,0.1)] text-white text-sm font-medium border-4 border-yellow">
                 <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
                 <h1>QiVOTE en chiffres</h1>
               </div>
             </div>
-            <h1 className="text-4xl font-semibold">QiVOTE, c'est une communauté grandissante et des chiffres concrets</h1>
+            <h1 className="text-4xl font-semibold">QiVOTE, c&apos;est une communauté grandissante et des chiffres concrets</h1>
           </div>
-          <div  className="max-w-3xl flex flex-wrap justify-between gap-5 lg:gap-10">
+          <div  className="max-w-3xl flex flex-wrap justify-between gap-5 md:gap-10">
             <div className="flex justify-between gap-10">
               <div className="font-medium text-xl">
                 <h1 className="font-medium text-3xl">+120</h1>
