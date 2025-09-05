@@ -137,12 +137,8 @@ const Navbar1 = ({
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
 
-                  <div className="text-white">
-                    {menu.map((item) => renderMobileMenuItem(item))}
-                  </div>
-
                   <div className="flex flex-col gap-3">
-                    <Link href="/devenir-annonceur" className="group rounded-full border-white text-black ">
+                    <Link href="/devenir-annonceur" className="group rounded-full border-white text-white bg-white/10 backdrop-blur-3xl px-6 py-2 flex items-center gap-2">
                       Publier une annonce
                       <ArrowRight
                         className="h-5 w-5 transition-transform duration-300 -rotate-45 group-hover:rotate-0"
@@ -192,7 +188,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline hover:bg-transparent text-black">
+        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline hover:bg-transparent text-white">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">
@@ -205,7 +201,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <Link key={item.title} href={item.url} className="text-md font-semibold hover:bg-transparent text-black">
+    <Link key={item.title} href={item.url} className="text-md font-semibold hover:bg-transparent text-white">
       {item.title}
     </Link>
   );
@@ -214,14 +210,14 @@ const renderMobileMenuItem = (item: MenuItem) => {
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
   return (
     <Link
-      className="flex select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-transparent focus:bg-transparent active:bg-transparent"
+      className="flex select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-transparent focus:bg-transparent active:bg-transparent text-white"
       href={item.url}
     >
-      <div className="text-foreground">{item.icon}</div>
+      <div className="text-white">{item.icon}</div>
       <div>
-        <div className="text-sm font-semibold">{item.title}</div>
+        <div className="text-sm font-semibold text-white">{item.title}</div>
         {item.description && (
-          <p className="text-muted-foreground text-sm leading-snug">
+          <p className="text-gray-300 text-sm leading-snug">
             {item.description}
           </p>
         )}

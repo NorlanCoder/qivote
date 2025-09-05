@@ -50,7 +50,7 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame15} alt="Créez et partagez vos événements" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
                     <div className="flex items-center gap-2 mb-2">
                       <Image src="/icônes/icone-confettis.png" alt="Icône événement" width={20} height={20} />
                     </div>
@@ -63,7 +63,7 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow flex">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame17} alt="Gérez vos nominations, inscriptions et réservations" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
                     <div className="flex items-center gap-2 mb-2">
                       <Image src="/icônes/icone-disposition-du-tableau.png" alt="Icône gestion" width={20} height={20} />
                     </div>
@@ -76,7 +76,7 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame16} alt="Scannez, votez, validez... depuis votre téléphone" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
                     <div className="flex items-center gap-2 mb-2">
                       <Image src="/icônes/icone-vote.png" alt="Icône vote" width={20} height={20} />
                     </div>
@@ -89,7 +89,7 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame18} alt="Paiement sécurisé" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
                     <div className="flex items-center gap-2 mb-2">
                       <Image src="/icônes/icone-paiment.png" alt="Icône paiement" width={20} height={20} />
                     </div>

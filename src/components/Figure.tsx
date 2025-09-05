@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Figure() {
   return (
-    <section className="relative h-screen flex items-center">
+    <section className="relative h-[80vh] flex items-center">
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -26,7 +26,7 @@ export default function Figure() {
         <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-12 lg:gap-20 xl:gap-44">
           <div className="max-w-2xl pb-2">
             <div className={`flex  mb-6`}>
-              <div className="inline-flex items-center px-3 py-2 rounded-full bg-[rgba(255,255,255,0.1)] text-white text-sm font-medium border-4 border-yellow">
+              <div className="inline-flex items-center px-3 py-2 rounded-full text-white text-sm font-medium bg-white/10 backdrop-blur-md border-none">
                 <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
                 <h1>QiVOTE en chiffres</h1>
               </div>

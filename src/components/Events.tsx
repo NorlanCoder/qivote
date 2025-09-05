@@ -9,7 +9,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame15.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯", // Drapeau du Bénin
     link: "/evenements/1"
   },
@@ -19,7 +20,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame16.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯",
     link: "/evenements/2"
   },
@@ -29,7 +31,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame17.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯",
     link: "/evenements/3"
   },
@@ -39,7 +42,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame18.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯",
     link: "/evenements/4"
   }
@@ -47,7 +51,7 @@ const events = [
 
 const Events = () => {
   return (
-    <section className="py-14 bg-gray-50 text-black">
+    <section className="py-14 text-black">
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         {/* Header Section */}
         <div className="text-center mb-12">

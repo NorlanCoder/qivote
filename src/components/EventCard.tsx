@@ -9,6 +9,7 @@ interface Event {
   tags: string[];
   description: string;
   image: string;
+  image2: string;
   flag: string;
   link: string;
 }
@@ -31,14 +32,14 @@ const EventCard = ({ event }: EventCardProps) => {
         />
       </div>
 
-      <div className="absolute left-1/2 top-48 transform -translate-x-1/2 -translate-y-1/2 z-10">
+      <div className="absolute left-1/2 top-56 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
           <Image
-            src={event.image}
+            src={event.image2}
             alt={event.title}
             fill
             className="object-cover object-center rounded-full"
-            sizes="70px"
+            sizes="80px"
           />
         </div>
       </div>
