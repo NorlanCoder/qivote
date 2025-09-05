@@ -84,7 +84,7 @@ const Navbar1 = ({
           </div>
           <div className="flex gap-3 items-center">
             <Button asChild className="bg-white/10 backdrop-blur-3xl text-white rounded-full px-6 py-2 transition-all">
-              <Link href="#publish" className="flex items-center gap-2">
+              <Link href="/devenir-annonceur" className="flex items-center gap-2">
                 Devenir annonceur
                 <ArrowRight
                   className="h-5 w-5 text-white transition-transform duration-300 -rotate-45 group-hover:rotate-0"
@@ -142,7 +142,7 @@ const Navbar1 = ({
                   </div>
 
                   <div className="flex flex-col gap-3">
-                    <Link href="#publish" className="group rounded-full border-white text-black ">
+                    <Link href="/devenir-annonceur" className="group rounded-full border-white text-black ">
                       Publier une annonce
                       <ArrowRight
                         className="h-5 w-5 transition-transform duration-300 -rotate-45 group-hover:rotate-0"
