@@ -4,7 +4,7 @@ import Img1 from "../../public/images/img1.jpg";
 export default function Advantage() {
   return (
     <div className="w-full  py-14">
-        <div  className="max-w-6xl mx-auto  items-center gap-6 lg:gap-12 flex flex-col md:flex-row px-4 md:px-8">
+        <div  className="max-w-7xl mx-auto  items-center gap-6 lg:gap-12 flex flex-col md:flex-row px-4 md:px-8">
             <div className=" max-w-lg lg:max-w-xl mt-6 md:mt-0 space-y-5">
                 <h1  className=" ">Pourquoi choisir QiVOTE?</h1>
                 <h1 className="text-gray-900 text-3xl font-semibold sm:text-4xl">Une plateforme pensée pour la simplicité, l'éfficacité ... et le succès de vos évènements.</h1>
