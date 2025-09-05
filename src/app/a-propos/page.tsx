@@ -1,174 +1,234 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
+'use client';
+import CustomTitle from '@/components/CustomTitle';
+import Image from 'next/image';
+
 const Apropos = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-            Votre plateforme de{' '}
-            <span className="inline-flex items-center">
-              <svg className="w-8 h-8 md:w-10 md:h-10 mx-2 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </span>
-            vote en ligne{' '}
-            <br />
-            sécurisée et intuitive
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Une expérience de vote complète avec des fonctionnalités avancées, 
-            une sécurité renforcée et une interface intuitive pour tous les utilisateurs.
-          </p>
+      <section className="bg-[#F5F5F5]">
+        <div className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+          <div className="text-center">
+            <CustomTitle title="Qui sommes-nous ?" position="center" />
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+              Votre plateforme de{' '}
+              <span className="inline-flex items-center">
+                {/*une Image */}
+                <svg
+                  className="w-8 h-8 md:w-10 md:h-10 mx-2 text-red-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </span>
+             <span className="text-gray-600 font-bold">vote en ligne</span> <br />
+              sécurisée et intuitive
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed ">
+              Que vous soyez une entreprise ou un particulier, notre outil vous
+              permet de créer des votes et des nominations en quelques clics, et
+              de laisser le public désigner les gagnants selon leurs
+              préférences.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Section 1: Révolutionner */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img
-              src="/lovable-uploads/7e7fbc73-2466-4ebf-a537-b22d2e838641.png"
+            {/*Image*/}
+            <Image
+              src="/images/apropos/image-appros5.jpg"
               alt="Personne travaillant sur ordinateur"
-              className="w-full h-80 object-cover rounded-xl"
+              width={612}
+              height={440}
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
           <div>
+            <CustomTitle title="Notre mission" />
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              Révolutionner la manière dont les événements virtuels sont organisés et vécus
+              Révolutionner la manière dont les événements virtuels sont
+              organisés et vécus
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              Notre plateforme transforme complètement l'expérience des événements virtuels 
-              en offrant des outils innovants et une technologie de pointe qui permettent 
-              d'organiser des votes en ligne sécurisés et transparents.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Nous créons des moments de démocratie participative grâce à une interface 
-              intuitive, des fonctionnalités interactives avancées et une sécurité optimale 
-              pour tous vos processus électoraux numériques.
+              Nous offrons une plateforme de vote en ligne intuitive et
+              sécurisée, permettant aux entreprises et aux particuliers de créer
+              des expériences engageantes et transparentes. En facilitant la
+              participation du public et en garantissant des résultats fiables,
+              nous aidons nos utilisateurs à transformer leurs idées en succès.
             </p>
           </div>
         </div>
       </section>
 
       {/* Section 2: Expérience inoubliable */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              Faire de chaque événement une expérience inoubliable et engageante
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Nous mettons l'accent sur l'engagement et l'interaction pour créer 
-              des expériences de vote virtuel qui marquent les esprits et rassemblent 
-              les communautés autour de décisions importantes.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Chaque détail est pensé pour maximiser la participation et 
-              l'engagement de vos électeurs, créant ainsi des processus démocratiques 
-              inclusifs et transparents.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/lovable-uploads/7e7fbc73-2466-4ebf-a537-b22d2e838641.png"
-              alt="Événement de vote 1"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <img
-              src="/lovable-uploads/7e7fbc73-2466-4ebf-a537-b22d2e838641.png"
-              alt="Événement de vote 2"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <img
-              src="/lovable-uploads/7e7fbc73-2466-4ebf-a537-b22d2e838641.png"
-              alt="Événement de vote 3"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <img
-              src="/lovable-uploads/7e7fbc73-2466-4ebf-a537-b22d2e838641.png"
-              alt="Événement de vote 4"
-              className="w-full h-48 object-cover rounded-lg"
-            />
+      <section className="bg-default">
+        <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <CustomTitle title="Notre vision" position="left" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                Faire de chaque événement une expérience interactive et
+                mémorable
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                En combinant innovation technologique et simplicité
+                d'utilisation, nous aspirons à être la référence mondiale des
+                plateformes de vote en ligne. Notre objectif est d'offrir à
+                chacun les outils nécessaires pour engager son audience, prendre
+                des décisions éclairées et célébrer le pouvoir de la
+                participation collective.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {/* Grande image à gauche */}
+              <div className="row-span-2">
+                <Image
+                  src="/images/apropos/image-appros2.jpg"
+                  alt="Grande image"
+                  width={500}
+                  height={600}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Image en haut à droite */}
+              <div>
+                <Image
+                  src="/images/apropos/image-appros3.jpg"
+                  alt="Haut droite"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Image en bas à droite */}
+              <div>
+                <Image
+                  src="/images/apropos/image-appros4.jpg"
+                  alt="Bas droite"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       {/* Section 3: Outils puissants */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto justify-center">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Nous offrons des outils puissants pour créer des événements mémorables et engageants
+          <CustomTitle title="Pourquoi choisir QiVOTE ?" position="center" />
+          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-4 text-center mx-auto justify-center leading-tight max-w-4xl">
+            Nous offrons des outils puissants pour créer des événements
+            mémorables et engageants.
           </h2>
+          <p className="text-gray-600 text-md lg:text-lg justify-center">
+            Voici ce qui nous distingue :
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+
+        {/* Grid des cartes */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <div className="flex flex-col text-left bg-default p-4 rounded-lg ">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 bg-gray-800 text-white rounded-md flex items-center justify-center">
+               {/*IMAGE image.svg */}
+               <Image
+                 src="/images/apropos/icon2.svg"
+                 alt="Image 2"
+                 width={40}
+                 height={40}
+                 className="w-5 h-5"
+               />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Simplicité d’utilisation
+              </h3>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Interface intuitive</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Une interface utilisateur simple et élégante qui permet à chacun 
-              de voter facilement et de profiter pleinement de l'expérience démocratique.
+            <p className="text-gray-600 text-sm md:text-[16px] leading-relaxed">
+            Notre interface intuitive vous permet de créer et de gérer vos événements en quelques minutes, sans compétences techniques requises.
             </p>
           </div>
 
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          {/* Card 2 */}
+          <div className="flex flex-col text-left bg-default p-4 rounded-lg">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 bg-gray-800 text-white rounded-md flex items-center justify-center">
+                 <Image
+                 src="/images/apropos/icon3.svg"
+                 alt="Image 3"
+                 width={40}
+                 height={40}
+                 className="w-5 h-5"
+               />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Sécurité renforcée
+              </h3>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Sécurité avancée</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Protection maximale de vos données et de vos processus électoraux grâce 
-              à nos protocoles de sécurité de niveau bancaire et cryptographie avancée.
+            <p className="text-gray-600 text-sm md:text-[16px] leading-relaxed">
+              Nous utilisons les dernières technologies pour garantir la sécurité et l'intégrité de vos votes, afin que vous puissiez organiser vos événements en toute confiance.
             </p>
           </div>
 
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+          {/* Card 3 */}
+          <div className="flex flex-col text-left bg-default p-4 rounded-lg">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 bg-gray-800 text-white rounded-md flex items-center justify-center">
+                <Image
+                 src="/images/apropos/icon1.svg"
+                 alt="Image 1"
+                 width={40}
+                 height={40}
+                 className="w-5 h-5"
+               />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Personnalisation avancée
+              </h3>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Performance optimale</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Des performances exceptionnelles qui garantissent une expérience 
-              fluide même lors d'élections à grande échelle avec des milliers de participants.
+            <p className="text-gray-600 text-sm md:text-[16px] leading-relaxed">
+              Adaptez chaque aspect de vos événements à vos besoins, des
+              inscriptions aux votes, pour une expérience unique et engageante.
             </p>
           </div>
         </div>
       </section>
 
       {/* Section 4: Transformation */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              Nous transformons la façon dont les vies sont organisées
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Notre équipe passionnée travaille chaque jour pour démocratiser l'accès 
-              au vote numérique et créer des expériences démocratiques qui 
-              dépassent toutes les attentes en termes de transparence et d'engagement.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Ensemble, nous bâtissons l'avenir de la démocratie numérique 
-              en combinant innovation technologique, sécurité de pointe et 
-              une expertise reconnue en processus électoraux.
-            </p>
-          </div>
-          <div>
-            <img
-              src="/lovable-uploads/7e7fbc73-2466-4ebf-a537-b22d2e838641.png"
-              alt="Équipe travaillant ensemble sur le vote numérique"
-              className="w-full h-80 object-cover rounded-xl"
-            />
+      <section className="bg-[#F5F5F5]">
+        <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <CustomTitle title="Rejoignez-nous" position="left" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                Nous transformons la façon dont les votes sont organisés
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Nous cherchons des personnes passionnées pour nous aider à
+                révolutionner l'organisation de votes et de nominations. Si vous
+                partagez notre vision, rejoignez-nous pour faire la différence.
+              </p>
+            </div>
+            <div>
+              {/*Image*/}
+              <Image
+                src="/images/apropos/image-appros5.jpg"
+                alt=""
+                width={600}
+                height={400}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
