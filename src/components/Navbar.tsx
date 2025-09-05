@@ -1,4 +1,4 @@
-import { Menu, User, ChevronDown } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -46,7 +46,7 @@ interface Navbar1Props {
 const Navbar1 = ({
   logo = {
     url: "/",
-    src: "/logo.png",
+    src: "/logo3.png",
     alt: "QivOTE Logo",
     title: "QivOTE",
   },
@@ -58,37 +58,40 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="py-4 fixed inset-x-0 top-0 z-50 bg-white backdrop-blur border-gray-200">
-      <div className="max-w-2xl md:max-w-7xl mx-auto px-4 xl:px-0">
+    <section className="py-4 absolute inset-x-0 top-0 z-50 bg-transparent">
+      <div className="max-w-7xl mx-auto px-4 xl:px-0">
         {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center gap-6">
+        <nav className="hidden justify-between lg:flex items-center">
+          <div className="flex items-center gap-8">
             {/* Logo */}
             <Link href={logo.url} className="flex items-center gap-2">
               <Image
                 src={logo.src}
-                width={100}
-                height={100}
+                width={120}
+                height={120}
                 className="max-h-20"
                 alt={logo.alt}
               />
             </Link>
+            <div className="h-6 w-px bg-white"></div>
             <div className="flex items-center">
               <NavigationMenu>
-                <NavigationMenuList className="font-bold text-xl">
+                <NavigationMenuList className="font-bold text-white space-x-8">
                   {menu.map((item) => renderMenuItem(item))}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
           </div>
           <div className="flex gap-3 items-center">
-            <Button asChild variant="outline" size="sm" className="rounded-sm py-5 px-8 border-[#918EF4] text-[#918EF4] hover:bg-transparent hover:text-[#918EF4] hover:border-[#918EF4]">
-              <Link href="#publish">Publier une annonce</Link>
+            <Button asChild className="bg-white/10 backdrop-blur-3xl text-white rounded-full px-6 py-2 transition-all">
+              <Link href="#publish" className="flex items-center gap-2">
+                Devenir annonceur
+                <ArrowRight
+                  className="h-5 w-5 text-white transition-transform duration-300 -rotate-45 group-hover:rotate-0"
+                  strokeWidth={2}
+                />
+              </Link>
             </Button>
-            <button className="flex items-center gap-1 p-1 hover:bg-transparent">
-              <User className="h-5 w-5 text-gray-400" />
-              <ChevronDown className="h-3 w-3 text-gray-400" />
-            </button>
           </div>
         </nav>
 
@@ -111,7 +114,7 @@ const Navbar1 = ({
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
+              <SheetContent className="overflow-y-auto bg-black text-white">
                 <SheetHeader>
                   <SheetTitle>
                     <Link href={logo.url} className="flex items-center gap-2">
@@ -129,7 +132,7 @@ const Navbar1 = ({
                   <Accordion
                     type="single"
                     collapsible
-                    className="flex w-full flex-col gap-4"
+                    className="flex w-full flex-col gap-4 text-muted-foreground hover:text-white"
                   >
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
@@ -153,7 +156,7 @@ const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger className="hover:bg-transparent data-[state=open]:bg-transparent">{item.title}</NavigationMenuTrigger>
+        <NavigationMenuTrigger className="hover:bg-transparent data-[state=open]:bg-transparent text-white">{item.title}</NavigationMenuTrigger>
         <NavigationMenuContent className="bg-popover hover:bg-transparent text-popover-foreground">
           {item.items.map((subItem) => (
             <NavigationMenuLink asChild key={subItem.title} className="hover:bg-transparent w-80">
@@ -169,7 +172,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <Link
         href={item.url}
-        className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-transparent hover:no-underline"
+        className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-transparent hover:no-underline"
       >
         {item.title}
       </Link>
@@ -181,7 +184,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline hover:bg-transparent">
+        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline hover:bg-transparent text-black">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">
@@ -194,7 +197,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <Link key={item.title} href={item.url} className="text-md font-semibold hover:bg-transparent">
+    <Link key={item.title} href={item.url} className="text-md font-semibold hover:bg-transparent text-black">
       {item.title}
     </Link>
   );

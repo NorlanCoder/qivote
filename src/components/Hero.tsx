@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-16 sm:pt-16 min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-60px)] flex items-center">
+    <section className="relative h-screen flex items-center">
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -15,48 +15,49 @@ export default function Hero() {
           priority
           quality={100}
         />
-        {/* Overlay dégradé du bas vers le haut pour améliorer la lisibilité du texte */}
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/90 via-black/70 via-20% to-transparent" />
+        {/* Overlay dégradé du bas vers le haut */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-black via-5% to-transparent" />
+        {/* Overlay dégradé du haut vers le bas */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/60 via-transparent via-20% to-transparent" />
       </div>
 
       {/* Contenu */}
-      {/* Contenu déplacé vers la fin de la section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 xl:px-0 w-full mt-auto mb-14 flex items-end">
-        <div className="max-w-2xl">
+      <div className="absolute bottom-0 left-0 right-0 z-10 max-w-7xl mx-auto px-4 xl:px-0 w-full flex items-end pb-20">
+        <div className="max-w-3xl">
           {/* Titre principal */}
-          <h1 className="font-chillax font-semibold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-6 animate-in fade-in-50 slide-in-from-bottom duration-700">
-            VOTEZ, SOUTENEZ,
+          <h1 className="font-chillax font-semibold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight mb-4 animate-in fade-in-50 slide-in-from-bottom duration-700">
+            <span className="xs:text-lg sm:text-4xl lg:text-4xl font-chillax font-semibold">Votez,</span>
             <br />
-            ET CÉLÉBREZ LES TALENTS
+            VOS COUPS DE CŒUR DU
             <br />
-            <span>DU MONDE ENTIER !</span>
+            MONDE ENTIER !
           </h1>
 
           {/* Sous-titre */}
-          <p className="text-md sm:text-lg text-white/90 mb-8 leading-relaxed font-medium animate-in fade-in-50 slide-in-from-bottom duration-700 delay-200">
-            Notre plateforme révolutionne le vote en ligne pour vos événements favoris.
-            <br />
-            Participez et influencez les résultats dès maintenant.
+          <p className="text-md sm:text-lg text-white/90 mb-4 leading-relaxed font-light animate-in fade-in-50 slide-in-from-bottom duration-700 delay-200">
+            Notre plateforme révolutionne le vote en ligne pour vos événements favoris. <br /> Participez et influencez les résultats dès maintenant.
           </p>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in-50 slide-in-from-bottom duration-700 delay-400">
+          <div className="flex flex-row gap-4 animate-in fade-in-50 slide-in-from-bottom duration-700 delay-400">
             <Link
               href="/vote"
-              className="group inline-flex items-center justify-center px-8 py-4 hover:bg-[#918EF4] text-white font-semibold rounded-xl bg-[#7c78e8] transition-all"
+              className="group inline-flex items-center justify-center p-2 px-3 bg-white text-black font-light rounded-full hover:bg-gray-100 transition-all"
             >
               Voter maintenant
-              <ArrowRight
-                className="ml-2 h-5 w-5 transition-transform duration-300 -rotate-45"
-                strokeWidth={2}
-              />
+              <div className="p-2 bg-black rounded-full ml-2">
+                <ArrowRight
+                  className="h-5 w-5 text-white transition-transform duration-300 -rotate-45 group-hover:rotate-0"
+                  strokeWidth={2}
+                />
+              </div>
             </Link>
 
             <Link
               href="/publish"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-transparent font-semibold rounded-xl border-2 text-[#918EF4] border-[#918EF4]"
+              className="group inline-flex items-center justify-center p-2 px-3 bg-white/10 backdrop-blur-md text-white font-light rounded-full transition-all"
             >
-              Publier une annonce
+              Devenir annonceur
             </Link>
           </div>
         </div>

@@ -1,69 +1,105 @@
+// La partie "à disparu en mobile" (c'est-à-dire la grille de 4 panneaux à droite) peut disparaître en mobile à cause de la grille `grid-cols-2` sans adaptation responsive, ou à cause de la hauteur fixe (h-48) qui peut poser problème avec le contenu overflow, ou encore à cause de classes utilitaires qui ne s'adaptent pas bien sur mobile. 
+// De plus, la structure flex-row à l'intérieur de chaque panneau peut causer des problèmes d'affichage sur petits écrans.
+// Voici une version réécrite qui rend la grille responsive et s'assure que les panneaux restent visibles en mobile :
+
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import Frame15 from "../../public/images/Frame15.svg";
-import Frame16 from "../../public/images/Frame16.svg";
-import Frame17 from "../../public/images/Frame17.svg";
-import Frame18 from "../../public/images/Frame18.svg";
+import { ArrowRight, CheckIcon } from "lucide-react";
+import Frame15 from "../../public/images/Frame15.jpg";
+import Frame16 from "../../public/images/Frame16.jpg";
+import Frame17 from "../../public/images/Frame17.jpg";
+import Frame18 from "../../public/images/Frame18.jpg";
 
 const Functionality = () => {
   return (
-    <section className="py-14">
-      <div className="max-w-6xl mx-auto md:px-8">
-        <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-          <div className="max-w-xl px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
+    <section className="py-14 bg-[#F5F5F5]">
+      <div className="max-w-7xl mx-auto px-4 xl:px-0">
+        <div className="flex flex-col lg:flex-row items-center lg:gap-x-12 sm:px-4 md:px-0">
+          <div className="px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
             <h2 className="text-gray-900 text-3xl font-semibold sm:text-4xl">
               Tout ce qu’il vous faut, réuni
               <br />
               dans une seule plateforme.
             </h2>
-            <p className="text-gray-600 max-w-md">
+            <p className="text-gray-600 lg:max-w-xl">
               Gagnez du temps et offrez une expérience fluide à vos participants grâce à notre solution tout-en-un. Plus besoin de jongler entre plusieurs outils : tout est pensé pour simplifier votre organisation, valoriser votre image, et garder le contrôle, à chaque étape.
             </p>
             <ul className="space-y-3">
               <li className="flex gap-3 text-gray-700">
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#918EF4] text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
-                    <path fillRule="evenodd" d="M16.704 5.29a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06 0l-3-3a.75.75 0 111.06-1.06l2.47 2.47 6.97-6.97a.75.75 0 011.06 0z" clipRule="evenodd" />
-                  </svg>
-                </span>
+                <CheckIcon className="h-5 w-5" />
                 <span>Gagnez du temps, de la sérénité et de la confiance à chaque étape</span>
               </li>
               <li className="flex gap-3 text-gray-700">
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#918EF4] text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
-                    <path fillRule="evenodd" d="M16.704 5.29a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06 0l-3-3a.75.75 0 111.06-1.06l2.47 2.47 6.97-6.97a.75.75 0 011.06 0z" clipRule="evenodd" />
-                  </svg>
-                </span>
+                <CheckIcon className="h-5 w-5" />
                 <span>Offrez une expérience fluide et moderne à vos participants</span>
               </li>
             </ul>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="/accueil" className="inline-flex items-center gap-2 rounded-md hover:bg-[#A7A2F6] px-5 py-3 text-white shadow transition-all bg-[#7c78e8]">
+              <Link href="/accueil" className="group inline-flex items-center font-lignt gap-2 rounded-md bg-black px-5 py-3 text-white shadow transition-all">
                 Voter maintenant
-                <ArrowRight
-                  className="h-5 w-5 transition-transform duration-300 -rotate-45"
-                  strokeWidth={2}
-                />
+                <div className="p-1 bg-white rounded-full ml-2 text-black">
+                  <ArrowRight
+                    className="h-5 w-5 transition-transform duration-300 -rotate-45 group-hover:rotate-0"
+                    strokeWidth={2}
+                  />
+                </div>
               </Link>
-              <Link href="/evenements" className="inline-flex items-center gap-2 rounded-md border border-[#918EF4] px-5 py-3 text-[#918EF4]">
-                Publier une annonce
-            </Link>
             </div>
           </div>
-          <div className="flex-1 sm:hidden lg:block">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden rounded-xl bg-gray-100 shadow">
-                <Image src={Frame15} alt="Créez et partagez vos événements" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+
+          <div className="lg:flex-1 w-full mt-10 lg:mt-0">
+            {/* Ajout de w-full et mt-8 pour s'assurer que la grille s'affiche bien en mobile */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Panneau 1 - Créez et partagez vos événements */}
+              <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
+                <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
+                  <Image src={Frame15} alt="Créez et partagez vos événements" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/icônes/icone-confettis.png" alt="Icône événement" width={20} height={20} />
+                    </div>
+                    <p className="text-white text-xs font-medium">Créez et partagez vos événements <br /> en quelques clics</p>
+                  </div>
+                </div>
               </div>
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden rounded-xl bg-gray-100 shadow">
-                <Image src={Frame17} alt="Scannez, votez, validez... depuis votre téléphone" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+
+              {/* Panneau 2 - Gérez vos nominations */}
+              <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow flex">
+                <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
+                  <Image src={Frame17} alt="Gérez vos nominations, inscriptions et réservations" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/icônes/icone-disposition-du-tableau.png" alt="Icône gestion" width={20} height={20} />
+                    </div>
+                    <p className="text-white text-xs font-medium">Gérez vos nominations, inscrits <br /> et réservations en temps réel</p>
+                  </div>
+                </div>
               </div>
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden rounded-xl bg-gray-100 shadow">
-                <Image src={Frame16} alt="Gérez vos nominations, inscriptions et réservations" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+
+              {/* Panneau 3 - Scannez, votez, validez */}
+              <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
+                <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
+                  <Image src={Frame16} alt="Scannez, votez, validez... depuis votre téléphone" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/icônes/icone-vote.png" alt="Icône vote" width={20} height={20} />
+                    </div>
+                    <p className="text-white text-xs font-medium">Scannez, votez, validez... <br /> directement depuis votre téléphone</p>
+                  </div>
+                </div>
               </div>
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden rounded-xl bg-gray-100 shadow">
-                <Image src={Frame18} alt="Scannez, votez, validez... depuis votre téléphone" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+
+              {/* Panneau 4 - Paiement */}
+              <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
+                <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
+                  <Image src={Frame18} alt="Paiement sécurisé" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
+                  <div className="absolute bottom-4 left-4 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/icônes/icone-paiment.png" alt="Icône paiement" width={20} height={20} />
+                    </div>
+                    <p className="text-white text-xs font-medium">Paiements sécurisés et transactions <br /> instantanées </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
