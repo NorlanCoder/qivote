@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${archivo.className}`}>
         <Navbar />
-        <main className="pt-16 sm:pt-16">{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
