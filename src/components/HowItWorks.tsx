@@ -12,7 +12,7 @@ export default function HowItWorks() {
       </div>
       <div className="relative w-full ">
         <Image className="hidden md:block absolute -z-10 top-0 md:-top-4 lg:-top-8 xl:-top-12" src={Courbe} alt="courbe"  height={1100} />
-        <div className="flex flex-col md:flex-row justify-between px-0  md:px-10 lg:px-20">
+        <div className="flex flex-wrap md:flex-nowrap justify-between px-0  md:px-10 lg:px-20">
             <div className="flex flex-col  ">
                 <Image className="pb-3" src={Icone1} alt="icone1" width={50} height={50} />
                 <div className="max-w-44 lg:max-w-56 ">

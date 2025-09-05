@@ -12,24 +12,24 @@ import Frame18 from "../../public/images/Frame18.jpg";
 
 const Functionality = () => {
   return (
-    <section className="py-14 bg-[#F5F5F5]">
+    <section className="py-14 bg-[#F5F5F5] text-black">
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         <div className="flex flex-col lg:flex-row items-center lg:gap-x-12 sm:px-4 md:px-0">
           <div className="px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-            <h2 className="text-gray-900 text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-black text-3xl font-semibold sm:text-4xl">
               Tout ce qu’il vous faut, réuni
               <br />
               dans une seule plateforme.
             </h2>
-            <p className="text-gray-600 lg:max-w-xl">
+            <p className="lg:max-w-xl">
               Gagnez du temps et offrez une expérience fluide à vos participants grâce à notre solution tout-en-un. Plus besoin de jongler entre plusieurs outils : tout est pensé pour simplifier votre organisation, valoriser votre image, et garder le contrôle, à chaque étape.
             </p>
             <ul className="space-y-3">
-              <li className="flex gap-3 text-gray-700">
+              <li className="flex gap-3">
                 <CheckIcon className="h-5 w-5" />
                 <span>Gagnez du temps, de la sérénité et de la confiance à chaque étape</span>
               </li>
-              <li className="flex gap-3 text-gray-700">
+              <li className="flex gap-3">
                 <CheckIcon className="h-5 w-5" />
                 <span>Offrez une expérience fluide et moderne à vos participants</span>
               </li>

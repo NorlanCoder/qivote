@@ -47,7 +47,7 @@ const EventCard = ({ event }: EventCardProps) => {
       <div className="p-4 pt-10">
         {/* Titre et date de fermeture */}
         <div className="flex justify-between items-start mb-3">
-          <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
+          <h3 className="text-lg font-bold text-black">{event.title}</h3>
           <span className="text-sm text-gray-500 ml-2">Ferme le: {event.closingDate}</span>
         </div>
 
@@ -69,7 +69,7 @@ const EventCard = ({ event }: EventCardProps) => {
         </p>
 
         {/* Bouton "En savoir plus" */}
-        <div className="flex justify-end items-center">
+        <div className="flex justify-end items-center mt-5">
           <Link href="/accueil" className="group inline-flex items-center font-lignt gap-2 rounded-full bg-black px-5 py-3 text-white shadow transition-all">
             En savoir plus
             <div className="p-1 bg-white rounded-full ml-2 text-black">
