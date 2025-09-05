@@ -14,7 +14,7 @@ const CustomTitle = ({ title, position = 'left' }: CustomTitleProps) => {
 
   return (
     <div className={`flex ${alignment} mb-6`}>
-      <div className="inline-flex items-center px-3 py-2 rounded-full bg-[#E0E0E0] text-gray-700 text-sm font-medium">
+      <div className="inline-flex items-center px-3 py-2 rounded-full bg-[#E0E0E0] text-black text-sm font-medium">
         <span className="w-2 h-2 bg-gray-900 rounded-full mr-2"></span>
         {title}
       </div>
