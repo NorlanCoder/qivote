@@ -132,15 +132,23 @@ const Navbar1 = ({
                   <Accordion
                     type="single"
                     collapsible
-                    className="flex w-full flex-col gap-4 text-muted-foreground hover:text-white"
+                    className="flex w-full flex-col gap-4 text-white"
                   >
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
 
+                  <div className="text-white">
+                    {menu.map((item) => renderMobileMenuItem(item))}
+                  </div>
+
                   <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline" className="rounded-full border-[#918EF4] text-[#918EF4] hover:bg-transparent hover:text-[#918EF4]">
-                      <Link href="#publish">Publier une annonce</Link>
-                    </Button>
+                    <Link href="#publish" className="group rounded-full border-white text-black ">
+                      Publier une annonce
+                      <ArrowRight
+                        className="h-5 w-5 transition-transform duration-300 -rotate-45 group-hover:rotate-0"
+                        strokeWidth={2}
+                      />
+                    </Link>
                   </div>
                 </div>
               </SheetContent>
