@@ -11,9 +11,9 @@ const Functionality = () => {
     <section className="py-14 bg-[#F5F5F5] text-black">
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         <div className="flex flex-col lg:flex-row items-center lg:gap-x-12 sm:px-4 md:px-0">
-          <div className="px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
+          <div className="space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
             <h2 className="text-black text-3xl font-semibold sm:text-4xl">
-              Tout ce qu’il vous faut, réuni
+              Tout ce qu&apos;il vous faut, réuni
               <br />
               dans une seule plateforme.
             </h2>
@@ -31,7 +31,7 @@ const Functionality = () => {
               </li>
             </ul>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="/accueil" className="group inline-flex items-center font-lignt gap-2 rounded-md bg-black px-5 py-3 text-white shadow transition-all">
+              <Link href="/" className="group inline-flex items-center font-lignt gap-2 rounded-md bg-black px-5 py-3 text-white shadow transition-all">
                 Voter maintenant
                 <div className="p-1 bg-white rounded-full ml-2 text-black">
                   <ArrowRight
@@ -50,11 +50,12 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame15} alt="Créez et partagez vos événements" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 gap-2 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-sm flex">
                     <div className="flex items-center gap-2 mb-2">
-                      <Image src="/icônes/icone-confettis.png" alt="Icône événement" width={20} height={20} />
+                      <Image src="/icônes/icone-confettis.png" className="hidden sm:block" alt="Icône événement" width={20} height={20} />
+                      <Image src="/icônes/icone-confettis.png" className="block sm:hidden" alt="Icône événement" width={30} height={30} />
                     </div>
-                    <p className="text-white text-xs font-medium">Créez et partagez vos événements <br /> en quelques clics</p>
+                    <p className="text-white text-md md:text-sm font-medium">Créez et partagez vos événements <br /> en quelques clics</p>
                   </div>
                 </div>
               </div>
@@ -63,11 +64,12 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow flex">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame17} alt="Gérez vos nominations, inscriptions et réservations" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 gap-2 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-sm flex">
                     <div className="flex items-center gap-2 mb-2">
-                      <Image src="/icônes/icone-disposition-du-tableau.png" alt="Icône gestion" width={20} height={20} />
+                      <Image src="/icônes/icone-disposition-du-tableau.png" className="hidden sm:block" alt="Icône gestion" width={20} height={20} />
+                      <Image src="/icônes/icone-disposition-du-tableau.png" className="block sm:hidden" alt="Icône gestion" width={30} height={30} />
                     </div>
-                    <p className="text-white text-xs font-medium">Gérez vos nominations, inscrits <br /> et réservations en temps réel</p>
+                    <p className="text-white text-md md:text-sm font-medium">Gérez vos nominations, inscrits <br /> et réservations en temps réel</p>
                   </div>
                 </div>
               </div>
@@ -76,11 +78,12 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame16} alt="Scannez, votez, validez... depuis votre téléphone" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 gap-2 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-sm flex">
                     <div className="flex items-center gap-2 mb-2">
-                      <Image src="/icônes/icone-vote.png" alt="Icône vote" width={20} height={20} />
+                      <Image src="/icônes/icone-vote.png" className="hidden sm:block" alt="Icône vote" width={20} height={20} />
+                      <Image src="/icônes/icone-vote.png" className="block sm:hidden" alt="Icône vote" width={30} height={30} />
                     </div>
-                    <p className="text-white text-xs font-medium">Scannez, votez, validez... <br /> directement depuis votre téléphone</p>
+                    <p className="text-white text-md md:text-sm font-medium">Scannez, votez, validez... <br /> directement depuis votre téléphone</p>
                   </div>
                 </div>
               </div>
@@ -89,11 +92,12 @@ const Functionality = () => {
               <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden rounded-xl bg-gray-100 shadow">
                 <div className="flex flex-row sm:flex-row items-center gap-3 h-full">
                   <Image src={Frame18} alt="Paiement sécurisé" fill className="object-cover" sizes="(min-width: 1024px) 400px, 50vw" />
-                  <div className="absolute bottom-4 left-4 right-6 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-[300px] flex">
+                  <div className="absolute bottom-4 left-4 right-6 gap-2 bg-black/10 backdrop-blur-sm rounded-lg p-3 max-w-sm flex">
                     <div className="flex items-center gap-2 mb-2">
-                      <Image src="/icônes/icone-paiment.png" alt="Icône paiement" width={20} height={20} />
+                      <Image src="/icônes/icone-paiment.png" className="hidden sm:block" alt="Icône paiement" width={20} height={20} />
+                      <Image src="/icônes/icone-paiment.png" className="block sm:hidden" alt="Icône paiement" width={30} height={30} />
                     </div>
-                    <p className="text-white text-xs font-medium">Paiements sécurisés et transactions <br /> instantanées </p>
+                    <p className="text-white text-md md:text-sm font-medium">Paiements sécurisés et transactions <br /> instantanées </p>
                   </div>
                 </div>
               </div>

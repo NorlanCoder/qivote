@@ -33,7 +33,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-default">
+    <div className="min-h-screen bg-[#F5F5F5]">
       {/* Section principale avec formulaire */}
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
@@ -112,7 +112,7 @@ export default function ContactPage() {
                  {/* Téléphone avec indicatif */}
               <div className="space-y-2">
                 <Label htmlFor="telephone" className="text-sm font-medium text-gray-700">
-                  Mon numéro de téléphone c’est le...
+                  Mon numéro de téléphone c&apos;est le...
                 </Label>
                
                   <PhoneInput

@@ -49,7 +49,7 @@ const Footer = () => {
             <div>
               <h3 className="mb-4 font-semibold text-white">Navigation</h3>
               <ul className="text-muted-foreground space-y-3 text-sm">
-                <li className="hover:text-white font-medium"><Link href="/accueil">Accueil</Link></li>
+                <li className="hover:text-white font-medium"><Link href="/">Accueil</Link></li>
                 <li className="hover:text-white font-medium"><Link href="/evenements">Événements</Link></li>
                 <li className="hover:text-white font-medium"><Link href="/faq">FAQ</Link></li>
                 <li className="hover:text-white font-medium"><Link href="/contact">Nous contacter</Link></li>
