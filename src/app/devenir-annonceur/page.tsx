@@ -1,9 +1,10 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowRight } from 'lucide-react';
 import { FileDown } from "lucide-react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, FieldProps } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -40,7 +41,7 @@ export default function Page() {
     ...validationSchemaStep2.fields,
   });
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: { eventName: string; isNew: string; representative: string; email: string; phone: string; country: string; ifu: File | null; logo: File | null; }) => {
     const formattedValues = {
       ...values,
       ifu: values.ifu ? { name: values.ifu.name, size: values.ifu.size, type: values.ifu.type } : null,
@@ -164,7 +165,7 @@ export default function Page() {
                     <div>
                       <label className="block font-medium mb-1 text-xs">Numéro de téléphone (obligatoire)</label>
                       <Field name="phone">
-                        {({ field, form }) => (
+                        {({ field, form }: FieldProps) => (
                           <PhoneInput
                             country={"bj"}
                             value={field.value}
@@ -206,7 +207,7 @@ export default function Page() {
 
                         const errors = await validateForm();
                         const step1Fields = Object.keys(validationSchemaStep1.fields);
-                        if (!step1Fields.some((field) => errors[field])) {
+                        if (!step1Fields.some((field) => errors[field as keyof typeof errors])) {
                           setStep(2);
                         }
                       }}
@@ -233,7 +234,7 @@ export default function Page() {
                       <div className="flex justify-between items-center border rounded-lg bg-gray-50 px-3 py-3">
                         <input
                           type="file"
-                          onChange={(e) => setFieldValue("ifu", e.currentTarget.files[0] || null)}
+                          onChange={(e) => setFieldValue("ifu", e.currentTarget.files?.[0] || null)}
                           className="w-full text-xs focus:outline-none"
                         />
                         <FileDown className="w-4 h-4 text-black" />
@@ -246,7 +247,7 @@ export default function Page() {
                       <div className="flex justify-between items-center border rounded-lg bg-gray-50 px-3 py-3">
                         <input
                           type="file"
-                          onChange={(e) => setFieldValue("logo", e.currentTarget.files[0] || null)}
+                          onChange={(e) => setFieldValue("logo", e.currentTarget.files?.[0] || null)}
                           className="w-full text-xs focus:outline-none"
                         />
                         <FileDown className="w-4 h-4 text-black" />
