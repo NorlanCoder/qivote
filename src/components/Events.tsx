@@ -9,7 +9,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame15.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯", // Drapeau du Bénin
     link: "/evenements/1"
   },
@@ -19,7 +20,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame16.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯",
     link: "/evenements/2"
   },
@@ -29,7 +31,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame17.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯",
     link: "/evenements/3"
   },
@@ -39,7 +42,8 @@ const events = [
     closingDate: "12/12/12",
     tags: ["Sport", "Competition", "Culture"],
     description: "Le B-Ball Championship est un tournoi universitaire annuel de basketball qui se positionne comme le plus grand événement sportif universitaire du Bénin.",
-    image: "/images/Frame18.jpg",
+    image: "/images/accueil/event2.png",
+    image2: "/images/accueil/event1.png",
     flag: "🇧🇯",
     link: "/evenements/4"
   }
@@ -47,14 +51,14 @@ const events = [
 
 const Events = () => {
   return (
-    <section className="py-14 bg-gray-50 text-black">
+    <section className="py-14 text-black">
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold text-black mb-4">
             Découvrez et participez aux campagnes de vote actives
           </h2>
-          <p className="text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-lg max-w-2xl mx-auto mb-8 px-4 xl:px-0">
             Suivez vos projets préférés, soutenez vos talents favoris et faites entendre votre voix en temps réel !
           </p>
           <Link
@@ -66,7 +70,7 @@ const Events = () => {
         </div>
 
         {/* Event Cards Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {events.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}

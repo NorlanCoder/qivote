@@ -9,6 +9,7 @@ interface Event {
   tags: string[];
   description: string;
   image: string;
+  image2: string;
   flag: string;
   link: string;
 }
@@ -34,11 +35,11 @@ const EventCard = ({ event }: EventCardProps) => {
       <div className="absolute left-1/2 top-48 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
           <Image
-            src={event.image}
+            src={event.image2}
             alt={event.title}
             fill
             className="object-cover object-center rounded-full"
-            sizes="70px"
+            sizes="100px"
           />
         </div>
       </div>
@@ -46,7 +47,7 @@ const EventCard = ({ event }: EventCardProps) => {
       {/* Contenu de la carte */}
       <div className="p-4 pt-10">
         {/* Titre et date de fermeture */}
-        <div className="flex justify-between items-start mb-3">
+        <div className="flex justify-between items-center mb-3">
           <h3 className="text-lg font-bold text-black">{event.title}</h3>
           <span className="text-sm text-gray-500 ml-2">Ferme le: {event.closingDate}</span>
         </div>
@@ -54,12 +55,13 @@ const EventCard = ({ event }: EventCardProps) => {
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-3">
           {event.tags.map((tag, index) => (
-            <span
+            <div
               key={index}
               className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
             >
+              <span className="text-gray-600 text-xs rounded-full h-5 w-5"></span>
               {tag}
-            </span>
+            </div>
           ))}
         </div>
 
@@ -70,7 +72,7 @@ const EventCard = ({ event }: EventCardProps) => {
 
         {/* Bouton "En savoir plus" */}
         <div className="flex justify-end items-center mt-5">
-          <Link href="/accueil" className="group inline-flex items-center font-lignt gap-2 rounded-full bg-black px-5 py-3 text-white shadow transition-all">
+          <Link href="/" className="group inline-flex items-center font-lignt gap-2 rounded-full bg-black px-5 py-3 text-white shadow transition-all">
             En savoir plus
             <div className="p-1 bg-white rounded-full ml-2 text-black">
               <ArrowRight
