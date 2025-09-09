@@ -10,7 +10,7 @@ import CardNomine from '@/components/CardNomine';
 function page() {
   return (
     <section>
-        <div className='relative h-[80vh] flex items-center'>
+        <div className='relative h-[90vh] flex items-center'>
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/images/img5.png"
@@ -21,8 +21,6 @@ function page() {
                     quality={100}
                 />
             </div>
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-black via-5% to-transparent" />
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/60 via-transparent via-20% to-transparent" />
             <div className='absolute inset-0 z-10 flex flex-col justify-between max-w-7xl w-full mx-auto py-14 px-6 xl:px-0'>
                 <div className='flex justify-between pt-14'>
                     <div className="rounded-full border-[rgba(200,200,200,0.8)] border w-8 h-8 bg-[rgba(200,200,200,0.3)] flex justify-center items-center">

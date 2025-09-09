@@ -18,8 +18,6 @@ export default function CardNomine({ numero, nombre}: CardNomineProps) {
         fill
         className="object-cover rounded"
       />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-black via-5% to-transparent" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/60 via-transparent via-20% to-transparent" />
       <div className="absolute inset-0 p-6 flex flex-col justify-between text-white text-xs">
         <div className='bg-[rgba(200,200,200,0.3)] border border-[rgba(200,200,200,0.8)] rounded p-1 w-fit'>
           <h1>{nombre} votes</h1>
