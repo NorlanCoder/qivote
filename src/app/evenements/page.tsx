@@ -131,9 +131,9 @@ export default function EvenementsPage() {
 
         {/* Filters Section */}
         <div className="my-8 md:flex flex-wrap md:flex-nowrap justify-between items-center gap-4 p-2 bg-[#FAFAFA] ">
-          <div className="flex flex-wrap md:flex-nowrap justify-between gap-2 md:w-1/2">
+          <div className="flex flex-wrap md:flex-nowrap justify-between gap-2 md:w-2/3">
             {/* Search Input */}
-            <div className="relative flex-1 w-full md:max-w-md">
+            <div className="relative flex-1 w-full md:max-w-xl">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -142,7 +142,7 @@ export default function EvenementsPage() {
               <input
                 type="text"
                 placeholder="Rechercher un événement..."
-                className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-700 placeholder-gray-500 focus:outline-none accent-black focus:border-transparent"
               />
             </div>
 
@@ -169,7 +169,7 @@ export default function EvenementsPage() {
             </div>
           </div>
 
-          <div className="flex gap-2 justify-end pt-2 md:pt-0 md:w-1/2">
+          <div className="flex gap-2 justify-end pt-2 md:pt-0 md:w-1/3">
             {/* Status Filter */}
             <div className="flex items-center gap-2 bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 cursor-pointer hover:bg-gray-200 transition-colors md:max-w-sm">
               <span className="text-gray-700 font-medium">Statut</span>
