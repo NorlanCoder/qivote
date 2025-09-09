@@ -72,7 +72,7 @@ const EventCard = ({ event }: EventCardProps) => {
 
         {/* Bouton "En savoir plus" */}
         <div className="flex justify-end items-center mt-5">
-          <Link href="/" className="group inline-flex items-center font-lignt gap-2 rounded-full bg-black px-5 py-3 text-white shadow transition-all">
+          <Link href={event.link} className="group inline-flex items-center font-lignt gap-2 rounded-full bg-black px-5 py-3 text-white shadow transition-all">
             En savoir plus
             <div className="p-1 bg-white rounded-full ml-2 text-black">
               <ArrowRight
